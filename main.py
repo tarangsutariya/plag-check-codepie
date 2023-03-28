@@ -1,15 +1,12 @@
 import requests
 import json
-authcode = 'Token 602e6e507b8eece6c68db86663866e76,Token 602e6e507b8eece6c68db86663866e76'
-team_id = 1
-probs = []
-debug = True
-print("enter problem ids : ")
-curr = input()
-while(curr!="-1"):
-    probs.append(curr)
-    curr=input()
-webapp = "172.16.102.197"
+
+team_id = int(input("Enter team id"))
+authcode = input("AUTH CODE : ")
+probs = ['16925','17231','17354','15113','17355','17922','15140','17195','14676','15540','17864']
+debug = False
+
+webapp = "172.16.102.148"
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0',
@@ -27,8 +24,8 @@ headers = {
 
 params = {
     'problem_id': None,
-    'offering_id': '1214669',
-    'cv_id': '7183',
+  'offering_id': '7722854',
+    'cv_id': '22748',
 }
 
 for prb in probs:
